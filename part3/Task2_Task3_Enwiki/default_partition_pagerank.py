@@ -7,6 +7,9 @@ import sys
 
 
 def preprocess(line):
+ '''
+ Custom preprocessor function that processes the enwiki dataset lines
+ '''
  if line.startswith('#'): # This preprocesses the file to not include any comments
   return False
  out = line.split('\t')[1]
