@@ -3,7 +3,7 @@ from pyspark import SparkConf, SparkContext
 from operator import add
 import commands
 
-# get the ip address corresponding to eth1 interface(change the code if you want a different interface
+# get the ip address corresponding to eth1 interface(change the code if you want a different IP addres)
 ip_addr = commands.getoutput("/sbin/ifconfig eth1 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'")
 
 ### hdfs url 
@@ -14,8 +14,8 @@ sc = SparkContext.getOrCreate(conf=conf) 	#initialize spark context object
 
 lines = sc.textFile(url+'input').filter(lambda l: not l.startswith('#')) # get the input from hdfs and filter the commented lines
 
-links = lines.map(lambda l: (l.split('\t')[0],l.split('\t')[1])).partitionBy(200).distinct().groupByKey().cache() 
 # get the links rdd having the rows of the form (source_url, list(dest_urls))
+links = lines.map(lambda l: (l.split('\t')[0],l.split('\t')[1])).partitionBy(200).distinct().groupByKey().cache() 
 
 ranks = links.keys().map(lambda l: (l,1)).partitionBy(200)# initialize source urls rank to 1
 
