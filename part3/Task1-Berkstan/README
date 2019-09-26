@@ -1,7 +1,7 @@
 We assume that HDFS and Spark have already been configured before running this part.
 We assume that the hdfs bin and sbin folders have been added to the PATH variable and the main spark directory is in the same location as the files of this directory.
 
-Basically part3.sh, CSV_sort.py, README and spark-2.4.4-bin-hadoop2.7 are present in the same location
+Basically run.sh, pagerank.py, README, spark-2.4.4-bin-hadoop2.7 and the input file are present in the same location
 
 Once all this is ensured
 
@@ -12,5 +12,10 @@ where $2 is the name of the output folder where you want to save the output(defa
 What the run.sh does
 	The script takes the input file, puts it in hdfs. Then a spark-submit job is run that takes the hdfs file as input performs the pagerank computation
 	that stores the result in the hdfs folder. The script regains the control and gets the output from hdfs and stores it back in the local fs.
+
+
+Important Note: ip_addr of spark master is found by executing ifconfig and running grep on the result for "eth1"(We assume that eth1 has the private ip address).
+		 You can change that part of the code to use public ip as well
+
 
 run.sh is appropriately commented, you can find more details there

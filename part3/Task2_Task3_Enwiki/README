@@ -1,16 +1,25 @@
 We assume that HDFS and Spark have already been configured before running this part.
 We assume that the hdfs bin and sbin folders have been added to the PATH variable and the main spark directory is in the same location as the files of this directory.
-
-Basically part3.sh, CSV_sort.py, README and spark-2.4.4-bin-hadoop2.7 are present in the same location
+Basically  [run.sh, custom_partition_pagerank.py, default_partition_pagerank.py, README, spark-2.4.4-bin-hadoop2.7]  are present in the same location
+"custom_partition_pagerank.py" is a pyspark script that uses custom partitioner in pagerank algorithm
+"default_partition_pagerank.py" is a pyspark script that uses the default  partitioner in pagerank algorithm
 
 Once all this is ensured
 
-run.sh $1 $2
-where $1 is the name if the input file( default is 'web-BerkStan.txt' )
-where $2 is the name of the output folder where you want to save the output(default is "output")
+run.sh $1 $2 $3
+where $1 is the name of file which  is one of "custom_partition_pagerank.py", "default_partition_pagerank.py" (default value is "default_partition_pagerank.py") 
+where $2 is the number of partitions (default value is 200)
+where $3 is "yes" if persistence is required and "no" otherwise  (default value is "yes")
 
-What the run.sh does
-	The script takes the input file, puts it in hdfs. Then a spark-submit job is run that takes the hdfs file as input performs the pagerank computation
-	that stores the result in the hdfs folder. The script regains the control and gets the output from hdfs and stores it back in the local fs.
 
+ 
+What the run.sh does:
+	It runs the spark-sbmit job on the file that us input. The code is run on enwiki dataset and we assume it will be present
+        in the same location (/proj/uwmadison744-f19-PG0/data-part3/enwiki-pages-articles/). The job completes a pagerank algorithm for
+	5 iterations and the output is saved in the folder named "output"
+
+
+Important Note: ip_addr of spark master is found by executing ifconfig and running grep on the result for "eth1"(We assume that eth1 has the private ip address).
+		 You can change that part of the code to use public ip as well
+	 
 run.sh is appropriately commented, you can find more details there

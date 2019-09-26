@@ -31,7 +31,7 @@ def key_partitioner(url): #using hash partitioner on `url` (i.e the key in `link
 ## Create SparkContext by setting master's IP:PORT through sc.setMaster()
 ip_addr = commands.getoutput("/sbin/ifconfig eth1 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'")
 url = "hdfs://"+ip_addr+":9000/"
-conf = SparkConf().setAppName('Custom_partition_'+sys.argv[1]+'_'+sys.argv[2]).setMaster('spark://'+ ip_addr +':7077')
+conf = SparkConf().setAppName('Default_partition_'+sys.argv[1]+'_'+sys.argv[2]).setMaster('spark://'+ ip_addr +':7077')
 sc = SparkContext.getOrCreate(conf=conf)
 
 
@@ -55,4 +55,4 @@ for i in range(5):
  # commenting out this line results in performance gain so we commented that line at the cost of not getting ranks for destination articles that donot appear as source articles 
 
 
-ranks.saveAsTextFile('LeftRanks_Output') # save the output RDD in the folder named "output"
+ranks.saveAsTextFile('output') # save the output RDD in the folder named "output"

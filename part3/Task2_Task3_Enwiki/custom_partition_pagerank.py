@@ -55,4 +55,4 @@ for i in range(5):
  # commenting out this line results in performance gain so we commented that line at the cost of not getting ranks for destination articles that donot appear as source articles 
 
 
-ranks.saveAsTextFile('LeftRanks_Output') # save the output RDD in the folder named "output"
+ranks.saveAsTextFile('output') # save the output RDD in the folder named "output"

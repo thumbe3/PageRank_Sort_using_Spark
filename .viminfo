@@ -34,46 +34,84 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
-	 key_partitioner
-"1	LINE	0
-	c220g1-031123vm-3.wisc.cloudlab.us
-"2	LINE	0
-	c220g1-031123vm-2.wisc.cloudlab.us
-"3	LINE	0
-	c220g1-031123vm-3.wisc.cloudlab.us
-"4	LINE	0
-	c220g1-031123vm-2.wisc.cloudlab.us
-"5	LINE	0
-	c220g1-031123vm-1.wisc.cloudlab.us
-"6	LINE	0
+"0	CHAR	0
+	"default_partition_pagerank.py" 
+"1	CHAR	0
+	 and runs a pagrank algorithm on it.
 	
-"7	LINE	0
-	import sys
+"2	CHAR	0
+	"custom_partition_pagerank.py" is a pyspark script that uses custom partitioner in pagerank algorithm
+	"default_partition_pagerank.py" is a pyspark script that uses the default  partitioner in pagerank algorithm
+"3	CHAR	0
+	dd	The script takes the input file, puts it in hdfs. Then a spark-submit job is run that takes the hdfs file as input performs the pagerank computation
+		that stores the result in the hdfs folder. The script regains the control and gets the output from hdfs and stores it back in the local fs.
+	
+"4	LINE	0
+	file=$1
+"5	CHAR	0
+	where $3 is the name of file which 
+	
+"6	CHAR	0
+	ame of the output folder where you want to save the output(default is "output")
+	
+"7	CHAR	0
+	 name if the input file( default is 'web-BerkStan.txt' )
+	
 "8	LINE	0
-	import glob
+	hdfs dfs -get /output $OUTPUT	# get the directory from hdfs directory into a folder named $OUTPUT in local fs
 "9	LINE	0
-	import commands
-"-	CHAR	0
-	"/sbin/ifconfig").split("\n")[1].split()[1][5:] #get the ip address
+	rm -rf $OUTPUT 		# remove the output directory if it already exists
+""-	CHAR	0
+	 Task2_Task3_Enwiki
 
 # File marks:
-'0  27  19  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
-'1  13  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
-'2  19  65  ~/part2/README
-'3  13  83  ~/part2/part2.sh
-'4  6  13  ~/part2/CSV_sort.py
-'5  5  102  ~/part2/CSV_sort.py
-'6  6  0  ~/part2/part2.sh
-'7  4  0  /etc/hosts
-'8  2  33  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-env.sh
-'9  1  0  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/slaves
+'0  34  32  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+'1  20  57  ~/part3/Task2_Task3_Enwiki/run.sh
+'2  15  4  ~/part3/Task2_Task3_Enwiki/run.sh
+'3  2  4  ~/part2/.gitignore
+'4  3  0  ~/part3/README
+'5  8  72  ~/part3/README
+'6  1  97  ~/part3/README
+'7  6  23  ~/part3/Task1-Berkstan/README
+'8  1  0  ~/part3/Task1-Berkstan/pagerank.py
+'9  1  0  ~/part3/Task1-Berkstan/run.sh
 
 # Jumplist (newest first):
--'  27  19  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
--'  1  0  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
--'  13  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+-'  34  32  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
 -'  1  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+-'  20  57  ~/part3/Task2_Task3_Enwiki/run.sh
+-'  1  0  ~/part3/Task2_Task3_Enwiki/run.sh
+-'  15  4  ~/part3/Task2_Task3_Enwiki/run.sh
+-'  2  4  ~/part2/.gitignore
+-'  1  0  ~/part2/.gitignore
+-'  3  0  ~/part3/README
+-'  1  0  ~/part3/README
+-'  8  72  ~/part3/README
+-'  6  23  ~/part3/Task1-Berkstan/README
+-'  1  0  ~/part3/Task1-Berkstan/README
+-'  1  0  ~/part3/Task1-Berkstan/pagerank.py
+-'  1  0  ~/part3/Task1-Berkstan/run.sh
+-'  2  15  ~/part3/Task1-Berkstan/.gitignore
+-'  1  0  ~/part3/Task1-Berkstan/.gitignore
+-'  24  0  ~/part3/Task2_Task3_Enwiki/README
+-'  1  0  ~/part3/Task2_Task3_Enwiki/README
+-'  20  0  ~/part3/Task1-Berkstan/README
+-'  14  139  ~/part3/Task1-Berkstan/README
+-'  15  63  ~/part3/Task1-Berkstan/README
+-'  19  66  ~/part3/Task2_Task3_Enwiki/README
+-'  58  22  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+-'  58  22  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
+-'  1  0  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
+-'  18  13  ~/part3/Task2_Task3_Enwiki/run.sh
+-'  25  65  ~/part3/Task2_Task3_Enwiki/README
+-'  10  159  ~/part3/Task2_Task3_Enwiki/README
+-'  14  0  ~/part3/Task2_Task3_Enwiki/README
+-'  11  1  ~/part3/Task2_Task3_Enwiki/README
+-'  12  0  ~/part3/Task2_Task3_Enwiki/README
+-'  21  0  ~/part3/Task2_Task3_Enwiki/run.sh
+-'  4  0  ~/part3/Task2_Task3_Enwiki/run.sh
+-'  27  19  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
+-'  13  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
 -'  19  65  ~/part2/README
 -'  1  0  ~/part2/README
 -'  13  83  ~/part2/part2.sh
@@ -136,54 +174,165 @@
 -'  64  4  ~/pagerank_large_keyBy.py
 -'  7  0  ~/pagerank_nopartition.py
 -'  6  9  ~/pagerank_nopartition.py
--'  65  88  ~/pagerank_nopartition.py
--'  61  60  ~/pagerank_nopartition.py
--'  59  83  ~/pagerank_nopartition.py
--'  31  68  ~/pagerank_nopartition.py
--'  30  0  ~/pagerank_nopartition.py
--'  68  0  ~/pagerank_nopartition.py
--'  1  0  ~/nopartition.sh
--'  74  0  ~/pagerank_large_keyBy.py
--'  2  18  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-defaults.conf
--'  1  0  /mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/spark-defaults.conf
--'  3  0  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-defaults.conf
--'  30  21  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-defaults.conf.template
--'  1  0  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-defaults.conf.template
--'  6  73  ~/part3_large.sh
--'  1  0  ~/part3_large.sh
--'  5  16  /mnt/data/hadoop-3.1.2/etc/hadoop/workers
--'  54  53  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  47  57  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  37  3  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  1  0  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  26  33  /mnt/data/hadoop-3.1.2/etc/hadoop/hdfs-site.xml
--'  1  0  /mnt/data/hadoop-3.1.2/etc/hadoop/hdfs-site.xml
--'  10  445  ~/.ssh/authorized_keys
--'  26  33  /mnt/data/hadoop-3.1.2/etc/hadoop/hdfs-site.xml
--'  1  0  /mnt/data/hadoop-3.1.2/etc/hadoop/hdfs-site.xml
--'  54  53  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  47  57  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  37  3  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  1  0  /mnt/data/hadoop-3.1.2/etc/hadoop/hadoop-env.sh
--'  26  33  /mnt/data/hadoop-3.1.2/etc/hadoop/hdfs-site.xml
--'  1  0  /mnt/data/hadoop-3.1.2/etc/hadoop/hdfs-site.xml
--'  3  8  ~/all_ips
--'  1  0  ~/all_ips
 
 # History of marks within files (newest to oldest):
 
+> ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+	"	34	32
+	^	34	33
+	.	34	32
+	+	58	22
+	+	34	32
+
+> ~/part3/Task2_Task3_Enwiki/run.sh
+	"	20	57
+	^	20	58
+	.	20	56
+	+	20	0
+	+	6	0
+	+	1	9
+	+	1	23
+	+	6	16
+	+	7	9
+	+	8	2
+	+	10	13
+	+	11	6
+	+	7	13
+	+	11	11
+	+	20	85
+	+	20	162
+	+	22	0
+	+	4	7
+	+	1	39
+	+	3	64
+	+	5	29
+	+	8	2
+	+	14	10
+	+	15	5
+	+	15	5
+	+	17	0
+	+	19	25
+	+	20	89
+	+	21	0
+	+	22	0
+	+	22	0
+	+	4	6
+	+	1	12
+	+	3	9
+	+	4	0
+	+	1	0
+	+	1	0
+	+	2	0
+	+	1	104
+	+	18	13
+	+	20	56
+
+> ~/part2/.gitignore
+	"	2	4
+	^	2	5
+	.	2	4
+	+	1	6
+	+	2	4
+
+> ~/part3/README
+	"	3	0
+	^	3	0
+	.	3	0
+	+	1	91
+	+	1	106
+	+	9	0
+	+	1	55
+	+	3	96
+	+	4	0
+	+	1	55
+	+	6	27
+	+	1	97
+	+	8	72
+	+	1	14
+	+	3	0
+	+	4	0
+	+	3	0
+
+> ~/part3/Task1-Berkstan/README
+	"	6	23
+	^	6	24
+	.	4	84
+	+	15	1
+	+	15	2
+	+	14	140
+	+	15	0
+	+	17	0
+	+	19	0
+	+	4	84
+
+> ~/part3/Task1-Berkstan/pagerank.py
+	"	1	0
+
+> ~/part3/Task1-Berkstan/run.sh
+	"	1	0
+
+> ~/part3/Task1-Berkstan/.gitignore
+	"	2	15
+	^	2	16
+	.	2	0
+	+	2	0
+
+> ~/part3/Task2_Task3_Enwiki/README
+	"	24	0
+	^	24	0
+	.	23	64
+	+	9	14
+	+	12	17
+	+	11	36
+	+	16	0
+	+	16	0
+	+	19	66
+	+	16	0
+	+	9	15
+	+	10	35
+	+	11	7
+	+	12	7
+	+	10	7
+	+	12	63
+	+	16	0
+	+	11	0
+	+	10	77
+	+	19	66
+	+	25	0
+	+	19	86
+	+	14	0
+	+	16	0
+	+	14	93
+	+	14	34
+	+	16	0
+	+	14	0
+	+	14	43
+	+	14	73
+	+	15	0
+	+	4	0
+	+	5	108
+	+	3	50
+	+	3	0
+	+	19	67
+	+	10	159
+	+	11	58
+	+	12	64
+	+	17	204
+	+	18	92
+	+	18	8
+	+	19	66
+	+	23	64
+
 > ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
-	"	27	19
-	^	27	20
-	.	27	19
+	"	58	22
+	^	58	23
+	.	58	22
 	+	43	102
 	+	45	102
 	+	52	100
 	+	49	71
 	+	27	19
-
-> ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
-	"	13	0
+	+	58	22
 
 > ~/part2/README
 	"	19	65
