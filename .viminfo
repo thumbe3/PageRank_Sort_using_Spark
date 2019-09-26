@@ -34,7 +34,7 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
+""0	CHAR	0
 	 key_partitioner
 "1	LINE	0
 	c220g1-031123vm-3.wisc.cloudlab.us
@@ -54,22 +54,26 @@
 	import glob
 "9	LINE	0
 	import commands
-""-	CHAR	0
+"-	CHAR	0
 	"/sbin/ifconfig").split("\n")[1].split()[1][5:] #get the ip address
 
 # File marks:
-'0  19  65  ~/part2/README
-'1  13  83  ~/part2/part2.sh
-'2  6  13  ~/part2/CSV_sort.py
-'3  5  102  ~/part2/CSV_sort.py
-'4  6  0  ~/part2/part2.sh
-'5  4  0  /etc/hosts
-'6  2  33  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-env.sh
-'7  1  0  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/slaves
-'8  1  0  /mnt/data/hadoop-3.1.2/etc/hadoop/workers
-'9  1  0  /mnt/datahadoop-3.1.2/etc/hadoop/workers
+'0  27  19  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
+'1  13  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+'2  19  65  ~/part2/README
+'3  13  83  ~/part2/part2.sh
+'4  6  13  ~/part2/CSV_sort.py
+'5  5  102  ~/part2/CSV_sort.py
+'6  6  0  ~/part2/part2.sh
+'7  4  0  /etc/hosts
+'8  2  33  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-env.sh
+'9  1  0  /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/slaves
 
 # Jumplist (newest first):
+-'  27  19  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
+-'  1  0  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
+-'  13  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+-'  1  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
 -'  19  65  ~/part2/README
 -'  1  0  ~/part2/README
 -'  13  83  ~/part2/part2.sh
@@ -165,11 +169,21 @@
 -'  1  0  /mnt/data/hadoop-3.1.2/etc/hadoop/hdfs-site.xml
 -'  3  8  ~/all_ips
 -'  1  0  ~/all_ips
--'  117  1  ~/.bashrc
--'  1  0  ~/.bashrc
--'  13  83  ~/part2/part2.sh
 
 # History of marks within files (newest to oldest):
+
+> ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
+	"	27	19
+	^	27	20
+	.	27	19
+	+	43	102
+	+	45	102
+	+	52	100
+	+	49	71
+	+	27	19
+
+> ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+	"	13	0
 
 > ~/part2/README
 	"	19	65

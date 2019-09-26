@@ -1,0 +1,16 @@
+We assume that HDFS and Spark have already been configured before running this part.
+We assume that the hdfs bin and sbin folders have been added to the PATH variable and the main spark directory is in the same location as the files of this directory.
+
+Basically part3.sh, CSV_sort.py, README and spark-2.4.4-bin-hadoop2.7 are present in the same location
+
+Once all this is ensured
+
+run.sh $1 $2
+where $1 is the name if the input file( default is 'web-BerkStan.txt' )
+where $2 is the name of the output folder where you want to save the output(default is "output")
+
+What the run.sh does
+	The script takes the input file, puts it in hdfs. Then a spark-submit job is run that takes the hdfs file as input performs the pagerank computation
+	that stores the result in the hdfs folder. The script regains the control and gets the output from hdfs and stores it back in the local fs.
+
+run.sh is appropriately commented, you can find more details there
