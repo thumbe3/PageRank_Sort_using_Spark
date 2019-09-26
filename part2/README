@@ -1,12 +1,12 @@
 We assume that HDFS and Spark have already been configured before running this part.
 We assume that the hdfs bin and sbin folders have been added to the PATH variable and the main spark directory is in the same location as the files of this directory.
 
-Basically part2.sh, CSV_sort.py, README and spark-2.4.4-bin-hadoop2.7 are present in the same location
+Basically run.sh, CSV_sort.py, README and spark-2.4.4-bin-hadoop2.7 are present in the same location
 
 Once all this is ensured
 
 run
-./part2.sh $1 $2
+./run.sh $1 $2
 	where $1 is the name of the input file(should be present in the same directory) (if not provided the script will download export.csv and consider it as the input file)
 	where $2 is the name of the output folder where you want to save the output ( if not provided default name of the output folder is "output")
 
