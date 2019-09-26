@@ -5,7 +5,6 @@ import commands
 import glob
 import sys
 
-
 def preprocess(line):
  '''
  Custom preprocessor function that processes the enwiki dataset lines
@@ -30,8 +29,10 @@ def left_only(kvw):
  else:
   return (kvw[0], kvw[1][1]) #Other articles' ranks are updated from the contributions they receive
 
-# custom partitioner
 def key_partitioner(url): #using hash partitioner on `url` (i.e the key in `links` RDD)
+ '''
+ Custom partitioning function
+ '''
  return hash(url)
 
 ## Create SparkContext by setting master's IP:PORT through sc.setMaster()
@@ -48,7 +49,6 @@ if sys.argv[2]=="yes":
 else:
         links = lines.map(lambda l: (l.split('\t')[0],l.split('\t')[1])).partitionBy(int(sys.argv[1]), key_partitioner).distinct().groupByKey()
 
-
 # `ranks` is an RDD of (URL, rank) pairs with rank initialized to 1 for each URL
 ranks = links.keys().map(lambda l: (l,1)).partitionBy(int(sys.argv[1]), key_partitioner)
 for i in range(5):
@@ -57,6 +57,5 @@ for i in range(5):
 
 # ranks = links.keys().keyBy(lambda l:l).leftOuterJoin(ranks).map(left_only) # perform a left outer join to assign 0.15 rank to destination articles that donot appear as source articles
 # commenting out this line results in performance gain so we commented that line at the cost of not getting ranks for destination articles that donot appear as source articles 
-
 
 ranks.saveAsTextFile('output') # save the output RDD in the folder named "output"
