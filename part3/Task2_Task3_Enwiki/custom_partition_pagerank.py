@@ -21,9 +21,6 @@ def preprocess(line):
 
 
 def left_only(kvw):
- '''
- Custom preprocessor function that processes the enwiki dataset lines
- '''
  if (kvw[1][1] is None): #If a source article does not appear as destination article, they have second value as 'None' after leftOuterJoin()
   return (kvw[0],0.15) #I set the rank of such articles to 0.15
  else:
