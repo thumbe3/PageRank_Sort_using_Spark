@@ -7,6 +7,9 @@ import sys
 
 
 def preprocess(line):
+ '''
+ Custom preprocessor function that processes the enwiki dataset lines
+ '''
  if line.startswith('#'): # This preprocesses the file to not include any comments
   return False
  out = line.split('\t')[1]
@@ -19,6 +22,9 @@ def preprocess(line):
 
 
 def left_only(kvw):
+ '''
+ Custom preprocessor function that processes the enwiki dataset lines
+ '''
  if (kvw[1][1] is None): #If a source article does not appear as destination article, they have second value as 'None' after leftOuterJoin()
   return (kvw[0],0.15) #I set the rank of such articles to 0.15
  else:
@@ -33,8 +39,6 @@ ip_addr = commands.getoutput("/sbin/ifconfig eth1 | grep 'inet addr:' | cut -d: 
 url = "hdfs://"+ip_addr+":9000/"
 conf = SparkConf().setAppName('Custom_partition_'+sys.argv[1]+'_'+sys.argv[2]).setMaster('spark://'+ ip_addr +':7077')
 sc = SparkContext.getOrCreate(conf=conf)
-
-
 
 lines = sc.textFile('/proj/uwmadison744-f19-PG0/data-part3/enwiki-pages-articles/link-enwiki*').map(lambda l: l.lower()).filter(preprocess)
 
@@ -51,8 +55,8 @@ for i in range(5):
  contribs = links.join(ranks).flatMap(lambda l: map(lambda a: (a,float(l[1][1])/len(l[1][0])),l[1][0])) # Build an RDD of (targetURL, float) pairs with the contributions sent by each page
  ranks = contribs.reduceByKey(add).mapValues(lambda l: 0.15 + 0.85*l).partitionBy(int(sys.argv[1]),  key_partitioner) # Sum contributions by URL and get new ranks
 
- # ranks = links.keys().keyBy(lambda l:l).leftOuterJoin(ranks).map(left_only) # perform a left outer join to assign 0.15 rank to destination articles that donot appear as source articles
- # commenting out this line results in performance gain so we commented that line at the cost of not getting ranks for destination articles that donot appear as source articles 
+# ranks = links.keys().keyBy(lambda l:l).leftOuterJoin(ranks).map(left_only) # perform a left outer join to assign 0.15 rank to destination articles that donot appear as source articles
+# commenting out this line results in performance gain so we commented that line at the cost of not getting ranks for destination articles that donot appear as source articles 
 
 
 ranks.saveAsTextFile('output') # save the output RDD in the folder named "output"
