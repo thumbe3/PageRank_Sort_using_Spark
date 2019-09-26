@@ -65,18 +65,20 @@
 	 Task2_Task3_Enwiki
 
 # File marks:
-'0  34  32  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
-'1  20  57  ~/part3/Task2_Task3_Enwiki/run.sh
-'2  15  4  ~/part3/Task2_Task3_Enwiki/run.sh
-'3  2  4  ~/part2/.gitignore
-'4  3  0  ~/part3/README
-'5  8  72  ~/part3/README
-'6  1  97  ~/part3/README
-'7  6  23  ~/part3/Task1-Berkstan/README
-'8  1  0  ~/part3/Task1-Berkstan/pagerank.py
-'9  1  0  ~/part3/Task1-Berkstan/run.sh
+'0  9  7  ~/part2/README
+'1  34  32  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
+'2  20  57  ~/part3/Task2_Task3_Enwiki/run.sh
+'3  15  4  ~/part3/Task2_Task3_Enwiki/run.sh
+'4  2  4  ~/part2/.gitignore
+'5  3  0  ~/part3/README
+'6  8  72  ~/part3/README
+'7  1  97  ~/part3/README
+'8  6  23  ~/part3/Task1-Berkstan/README
+'9  1  0  ~/part3/Task1-Berkstan/pagerank.py
 
 # Jumplist (newest first):
+-'  9  7  ~/part2/README
+-'  1  0  ~/part2/README
 -'  34  32  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
 -'  1  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
 -'  20  57  ~/part3/Task2_Task3_Enwiki/run.sh
@@ -113,7 +115,6 @@
 -'  27  19  ~/part3/Task2_Task3_Enwiki/custom_partition_pagerank.py
 -'  13  0  ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
 -'  19  65  ~/part2/README
--'  1  0  ~/part2/README
 -'  13  83  ~/part2/part2.sh
 -'  1  0  ~/part2/part2.sh
 -'  6  13  ~/part2/CSV_sort.py
@@ -173,9 +174,27 @@
 -'  63  56  ~/pagerank_large_keyBy.py
 -'  64  4  ~/pagerank_large_keyBy.py
 -'  7  0  ~/pagerank_nopartition.py
--'  6  9  ~/pagerank_nopartition.py
 
 # History of marks within files (newest to oldest):
+
+> ~/part2/README
+	"	9	7
+	^	9	5
+	.	9	0
+	+	4	102
+	+	15	0
+	+	14	14
+	+	10	0
+	+	11	0
+	+	15	150
+	+	20	67
+	+	12	46
+	+	18	50
+	+	16	139
+	+	18	156
+	+	19	65
+	+	18	132
+	+	9	0
 
 > ~/part3/Task2_Task3_Enwiki/default_partition_pagerank.py
 	"	34	32
@@ -333,24 +352,6 @@
 	+	49	71
 	+	27	19
 	+	58	22
-
-> ~/part2/README
-	"	19	65
-	^	19	66
-	.	18	132
-	+	4	102
-	+	15	0
-	+	14	14
-	+	10	0
-	+	11	0
-	+	15	150
-	+	20	67
-	+	12	46
-	+	18	50
-	+	16	139
-	+	18	156
-	+	19	65
-	+	18	132
 
 > ~/part2/part2.sh
 	"	13	83
