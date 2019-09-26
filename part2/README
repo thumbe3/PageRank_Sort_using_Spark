@@ -17,5 +17,5 @@ What the script run.sh does:
 	and stores the result in the hdfs folder. The script regains the control and gets the output from hdfs and stores it back in the local fs.
 
 Important Note: ip_addr of spark master is found by executing ifconfig and running grep on the result for "eth1"(We assume that eth1 has the private ip address).
-		 You can change that part of the code to use public ip as well  
-part2.sh is appropraitely commented, you can find more details there
+		 You can change that part of the code to use public ip as well, but the same change needs to be done in the CSV_sort.py file.
+run.sh is appropraitely commented, you can find more details there

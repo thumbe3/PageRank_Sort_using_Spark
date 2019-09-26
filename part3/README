@@ -1,0 +1,8 @@
+Task1-Berkstan folder has the code specific for web-BerkStan.txt and completes the task 1 of the assignment
+
+Task2_Task3_Enwiki folder has the code specific to enwiki data, and completes task2 and 3 of the assignment
+ since the code there has number of partitions as well persistence as input 
+
+Since task4 is in regard to killing the worker process we have put the details of it in the report.
+
+Each of these folders have seperate README file as to how to run the code

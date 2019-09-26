@@ -249,3 +249,308 @@ vim pagerank_custome_p.py
 /mnt/data/spark-2.4.4-bin-hadoop2.7/bin/spark-submit ~/pagerank_custome_p.py 200 yes
 rm -rf LeftRanks_Output/
 /mnt/data/spark-2.4.4-bin-hadoop2.7/bin/spark-submit ~/pagerank_custome_p.py 200 yes
+cd ~
+ls
+cat mod3.py 
+wq
+ls
+mkdir part2
+cd part2
+vim part2.sh
+vim CSV_sort.py
+vim README
+ls /mnt/data
+vim README 
+ls
+cd ..
+vim pagerank_custome_p.py 
+cd part2/
+vim part2.sh 
+vim README
+vim part2.sh 
+jps
+./part2.sh
+chmod 777 part2.sh
+./part2.sh
+ls /mnt/data
+ls /mnt/data/hadoop-3.1.2/bin/
+ls /mnt/data/hadoop-3.1.2/sbin/
+vim ~/.bashrc
+source ~/.bashrc
+./part2.sh
+vim ~/.bashrc
+echo $PATH
+vim ~/.bashrc
+./part2.sh
+source ~/.bashrc
+./part2.sh
+vim part2.sh 
+./part2.sh 
+ls /mnt/data
+vim part2.sh 
+./part2.sh 
+vim CSV_sort.py 
+./part2.sh 
+jps
+cd ..
+ls
+vim all_ips
+ifconfig
+vim all_ips
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no echo "a"
+vim ~/.ssh/authorized_keys
+cat ~/.ssh/id_rsa.pub 
+vim ~/.ssh/authorized_keys
+
+stop-all.sh
+jps
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no rm -rf /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkditrt /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/datanode
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/namenode
+hdfs namenode -format
+start-dfs.sh
+
+cd part2/
+./part2.sh 
+hdfs dfs -ls /
+vim hadoop-3.1.2/etc/hadoop/core-site.xml
+vim /mnt/data/hadoop-3.1.2/etc/hadoop/core-site.xml
+vim CSV_sort.py 
+./part2.sh 
+vim CSV_sort.py 
+ifconfig
+netstat -anp | grep LISTEN 
+sudo jps
+stop-all.sh 
+netstat -anp | grep LISTEN 
+jps
+stop-dfs.sh
+jps
+kill -9 9649
+jps
+netstat -anp | grep LISTEN 
+ls
+cd ~
+
+jps
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+vim /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/slaves
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no rm -rf /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/datanode
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/namenode
+hdfs namenode -format
+start-dfs.sh
+netstat -anp | grep LISTEN 
+jps
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+netstat -anp | grep LISTEN 
+vim hadoop-3.1.2/etc/hadoop/workers 
+vim /mnt/datahadoop-3.1.2/etc/hadoop/workers 
+vim /mnt/data/hadoop-3.1.2/etc/hadoop/workers 
+vim /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/slaves
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+jps
+netstat -anp | grep LISTEN 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+jps
+netstat -anp | grep LISTEN 
+rm -rf /mnt/data/spark-2.4.4-bin-hadoop2.7/logs/
+jps
+mkdir /mnt/data/spark-2.4.4-bin-hadoop2.7/logs/
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-env.sh
+vim /mnt/data/spark-2.4.4-bin-hadoop2.7/conf/spark-env.sh
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+netstat -anp | grep LISTEN 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+jps
+netstat -anp | grep LISTEN 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+jps
+netstat -anp | grep LISTEN 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+jps
+ifconfig
+rm -rf /mnt/data/spark-2.4.4-bin-hadoop2.7/logs/
+mkdir /mnt/data/spark-2.4.4-bin-hadoop2.7/logs/
+vim /etc/hosts
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+cd ~
+cd part2/
+vim part2.sh 
+./part2.sh 
+vim CSV_sort.py 
+./part2.sh 
+ifconfig
+ls
+vim CSV_sort.py 
+./part2.sh 
+vim CSV_sort.py 
+./part2.sh 
+ls
+hostory
+history
+ls
+cd output/
+LS
+ls
+tail -10 part-00000
+cd ..
+vim part2.sh
+vim README 
+ls
+git init
+ls
+rm .git/
+rm -rf .git/
+cd ..
+ls
+git init
+git add -A
+git commit -m "part2 added"
+git push
+git remote add master https://github.com/thumbe3/BIgData_ass1.git
+git push
+git push master
+mkdir part3
+ls
+vim pagerank_custome_p.py 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/bin/spark-submit ~/pagerank_custome_p.py 200 yes
+vim part2/CSV_sort.py 
+cat part2/CSV_sort.py 
+vim pagerank_custome_p.py 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/bin/spark-submit ~/pagerank_custome_p.py 200 yes
+rm -rf LeftRanks_Output/
+/mnt/data/spark-2.4.4-bin-hadoop2.7/bin/spark-submit ~/pagerank_custome_p.py 200 yes
+ls
+cd part
+cd part3
+ls
+cd Task2_Task3_Enwiki/
+ls
+cp ../../pagerank_custome_p.py custom_partition_pagerank.py
+ls
+vim custom_partition_pagerank.py 
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+stop-all.sh
+jps
+kill -9 18812
+jps
+kill -9 15666
+jps
+kill -9 15314
+jps
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no rm -rf /mnt/data/hadoop-3.1.2/data
+cd ~
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no rm -rf /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/datanode
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/namenode
+hdfs namenode -format
+start-dfs.sh
+jps
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+jps
+/mnt/data/spark-2.4.4-bin-hadoop2.7/bin/spark-submit ~/pagerank_custome_p.py 200 yes
+rm -rf LeftRanks_Output/
+/mnt/data/spark-2.4.4-bin-hadoop2.7/bin/spark-submit ~/pagerank_custome_p.py 200 yes
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no rm -rf  /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/datanode
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/namenode
+
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no rm -rf  /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/datanode
+parallel-ssh -i -h all_ips -O StrictHostKeyChecking=no mkdir /mnt/data/hadoop-3.1.2/data/namenode
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/stop-all.sh 
+jps
+/mnt/data/spark-2.4.4-bin-hadoop2.7/sbin/start-all.sh 
+hdfs namenode -format
+start-dfs.sh
+jps
+cd part3/
+ls
+cd Task
+cd Task1-Berkstan/
+ls
+./run.sh 
+ls
+vim .gitignore
+wget https://snap.stanford.edu/data/web-BerkStan.txt.gz
+gunzip web-BerkStan.txt.gz 
+ls
+vim .gitignore 
+./run.sh 
+ls
+vim pagerank.py 
+vim run.sh 
+vim pagerank.py 
+vim README
+cd ..
+vim README
+ls
+vim README
+cd ..
+git add -u
+git status
+cd part2
+ls
+vim .gitignore
+cd ..
+git add -u
+git status
+cd part2
+ls
+cd ..
+cd part3
+ls
+cd Task2_Task3_Enwiki/
+ls
+./run.sh 
+vim run.sh 
+./run.sh 
+vim default_partition_pagerank.py 
+./run.sh custom_partition_pagerank.py 
+cd ..
+git add -u
+git commit -m "All done hopefully"
+git push
+ls
+cd part2/
+ls
+cd ..
+git pull
+cd part2
+ls
+vim README
+mv part2.sh run.sh
+ls
+cd ..
+ls
+cd part3/
+ls
+cd Task1-Berkstan/
+ls
+cd ..
+cd Task2_Task3_Enwiki/
+ls
+cd ..
+git add -u
+git status
+git commit -m "run.sh instead of part"
+git push
+git pull
